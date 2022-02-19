@@ -7,7 +7,7 @@
         FontSize="18"
         FontFamily="Segoe UI Light"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="600">
+        Title="Horoscope" Height="350" Width="550">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -26,9 +26,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Horoscope" FontSize="38" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="Choose your date of birth:" />
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Horoscope" Margin="0,0,0,5" FontSize="38" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Choose your date of birth:" Margin="0,5"/>
         <DatePicker Name="dpBirthday" Grid.Column="1" Grid.Row="3" Margin="5" SelectedDate="01/01/2000"/>
         <Button Grid.Column="1" Grid.Row="4" Content="Submit" Margin="5" Click="UpdateWindow"/>
 

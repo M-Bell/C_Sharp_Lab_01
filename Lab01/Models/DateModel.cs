@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace Lab01.Models
 {
@@ -22,6 +24,8 @@ namespace Lab01.Models
                 _dateOfBirth = value;
             }
         }
+
+
 
         internal string GetChineseZodiacSign()
         {

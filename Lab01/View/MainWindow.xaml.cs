@@ -21,19 +21,11 @@ namespace Lab01.View
     public partial class MainWindow : Window
     {
         private HoroscopeViewModel _viewModel;
+        DateTime defaultDate = new DateTime(2000, 1, 1);
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = _viewModel = new HoroscopeViewModel(dpBirthday.SelectedDate.Value);
-        }
-
-        private void UpdateWindow(object sender, RoutedEventArgs e)
-        {
-            _viewModel.refresh(dpBirthday.SelectedDate.Value);
-            tbAge.GetBindingExpression(TextBlock.TextProperty).UpdateTarget();
-            tbWesternZodiac.GetBindingExpression(TextBlock.TextProperty).UpdateTarget();
-            tbChineseZodiac.GetBindingExpression(TextBlock.TextProperty).UpdateTarget();
-            tbGreeting.GetBindingExpression(TextBlock.TextProperty).UpdateTarget();
+            DataContext = _viewModel = new HoroscopeViewModel(defaultDate);
         }
     }
 }
